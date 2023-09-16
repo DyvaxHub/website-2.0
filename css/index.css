@@ -1,0 +1,402 @@
+.wrapper{
+    width: 750px;
+    max-width: 100%;
+    margin: 100px auto 0;
+    padding: 50px;
+    border-radius: 5px;
+}
+.wrapper1 .header1 ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    padding-top: 50px;
+    padding-bottom: -100px;
+}
+.wrapper1 .header1 ul li{
+    position: relative;
+    margin-right: 50px;
+}
+.wrapper1 .header1{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 35px; */
+}
+.wrapper1 .header1 ul li:last-child{
+    margin-right: 0;
+}
+.wrapper1 .header1 ul li:before{
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+    top: 40%;
+    left: 55px;
+    width: 100%;
+    height: 2px;
+    background: grey;
+}
+.wrapper1 .header1 ul li:last-child::before{
+    display: none;
+}
+.wrapper1 .header1 ul li div{
+    padding: 5px;
+    border-radius: 50%;
+}
+.wrapper1 .header1 ul li p{
+    width: 50px;
+    height: 50px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+}
+.wrapper1 .header1 ul li.active::before,
+.wrapper1 .header1 ul li.active p{
+    background:  #8A2BE2;
+}
+.wrapper1 .form_wrap{
+    margin-bottom: 35px;
+}
+.modal_wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.modal_wrapper .shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: 0.2s ease;
+}
+.modal_wrapper .success_wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -800px);
+    transition: 0.5s ease;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+}
+.modal_wrapper .success_wrap .modal_icon{
+    margin-right:20px ;
+    width: 50px;
+    height: 50px;
+    background: darkgreen;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+.modal_wrapper.active{
+    visibility: visible;
+}
+.modal_wrapper.active .shadow{
+    opacity: 1;
+}
+.modal_wrapper.active .success_wrap{
+    transform: translate(-50%,-50%);
+}
+
+.btext{
+    padding-top: 10rem;
+}
+.bim:hover{
+     /* width: 100%; Make the image width fill the container */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    transform: scale(.9); /* Scale the image up by 1.1 */
+    transition: transform 0.2s ease-in;
+}
+.full{
+    height: 100vh;
+}
+.tel{
+    text-decoration: none;
+}
+.tel:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.links li a{
+    text-decoration: none;
+    color: black;
+    align-items: flex-start;
+}
+.links li a:hover{
+    text-decoration: underline;
+}
+.links li{
+    list-style: none;
+}
+@keyframes bounce {
+    0%, 100%, 20%, 50%, 80% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 310px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+  .shape {
+    position: absolute;
+    opacity: .5;
+  }
+
+  .rectangle {
+    width: 150px;
+    height: 100px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+
+.shadow-bottom{
+      background: linear-gradient(to top, transparent 10%, rgba(0, 0, 0, 0.9) 100%);
+  }
+
+  .test{
+    align-items: start;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Optional: Add margin to separate image and paragraph */
+}
+
+.active-tab {
+  background-color: #124958;
+  color: white;
+  border-radius: 10px;
+}
+
+.aside {
+    border: 1 solid red;
+}
+
+.question {
+    /* position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 50%; */
+    background-color: #126c90;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 7px;
+    border-radius: 50%;
+    /* background-color: #FFC107; */
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    bottom: -5px; /* Adjust the value to position the circle vertically */
+    /* right: -200px; Adjust the value to position the circle horizontally */
+
+}
+
+.test1 a {
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.test1 a:hover{
+    cursor: pointer;
+    transform: translateY(-50px);
+    box-shadow: 0;
+}
+.card-container{
+    overflow-y: auto;
+    max-height: 650px;
+    overflow-x: auto;
+}
+
+.prevent-copy{
+    user-select: none;
+}
+
+.countdown-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.countdown {
+    /* font-size: 24px; */
+    font-weight: bold;
+    color: #124958;
+}
+
+
+.plane-container {
+    position: absolute;
+}
+
+.plane {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: movePlane linear infinite;
+}
+
+@keyframes movePlane {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+    }
+}
+
+.mages{
+    background-color: #124958;
+    border-radius: 25%;
+    width: 30%;
+}
+
+/* Style for the WhatsApp icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    /* background-color: #157438; WhatsApp green */
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 9999;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    animation: pulse 2s infinite; /* Add animation */
+}
+
+.whatsapp-icon img {
+    width: 33px; /* Adjust the size as needed */
+    height: auto;
+}
+
+/* Change background color on hover */
+.whatsapp-icon:hover {
+    background-color: #128c7e; /* Darker green on hover */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Enlarge images on hover */
+.ban img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.ban img:hover {
+    transform: scale(1.1);
+}
+
+/* Make links pulse on hover */
+.ban a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.ban a:hover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* Loader Styles */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #124958;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #CB4125;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
